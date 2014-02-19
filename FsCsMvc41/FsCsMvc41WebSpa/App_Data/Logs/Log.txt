@@ -1,0 +1,14 @@
+ERROR [2014-02-19 10:10:08] Origin [WebPiranha.BeginRequest] Message [Unhandled exception]
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Piranha.Config.get_SiteTreeNamespaceId() in c:\Proj\GitHub\Piranha\Piranha\Config.cs:line 233
+   at Piranha.Web.Handlers.PermalinkHandler.HandleRequest(HttpContext context, Boolean draft, String[] args) in c:\Proj\GitHub\Piranha\Piranha\Web\Handlers\PermalinkHandler.cs:line 39
+   at Piranha.Web.Handlers.PermalinkHandler.HandleRequest(HttpContext context, String[] args) in c:\Proj\GitHub\Piranha\Piranha\Web\Handlers\PermalinkHandler.cs:line 22
+   at Piranha.WebPages.WebPiranha.BeginRequest(HttpContext context) in c:\Proj\GitHub\Piranha\Piranha\WebPages\WebPiranha.cs:line 292
+ERROR [2014-02-19 10:10:49] Origin [WebPiranha.BeginRequest] Message [Unhandled exception]
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Piranha.Config.get_SiteTreeId() in c:\Proj\GitHub\Piranha\Piranha\Config.cs:line 226
+   at Piranha.Models.Page.GetStartpage(Boolean draft) in c:\Proj\GitHub\Piranha\Piranha\Entities\Internal\Page.cs:line 332
+   at Piranha.Mvc.RouteHandler.HandleStartpage(HttpContext context) in c:\Proj\GitHub\Piranha\Piranha.Mvc\RouteHandler.cs:line 22
+   at Piranha.Web.Handlers.PermalinkHandler.HandleRequest(HttpContext context, Boolean draft, String[] args) in c:\Proj\GitHub\Piranha\Piranha\Web\Handlers\PermalinkHandler.cs:line 92
+   at Piranha.Web.Handlers.PermalinkHandler.HandleRequest(HttpContext context, String[] args) in c:\Proj\GitHub\Piranha\Piranha\Web\Handlers\PermalinkHandler.cs:line 22
+   at Piranha.WebPages.WebPiranha.BeginRequest(HttpContext context) in c:\Proj\GitHub\Piranha\Piranha\WebPages\WebPiranha.cs:line 292

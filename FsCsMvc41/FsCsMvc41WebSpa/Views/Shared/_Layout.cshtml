@@ -1,16 +1,37 @@
-<!DOCTYPE html>
-<html data-ng-app="contactsapp">
+﻿<!DOCTYPE html>
+<html data-ng-app="contactsapp" lang="en">
 <head>
+    <title>@Page.Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    @UI.Head()
+
+    <link type="text/css" rel="stylesheet" href="~/content/css/style.css" />
+
+    @RenderSection("head", required: false)
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/themes/base/css", "~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    @RenderBody()
+    <header role="banner">
+        <div class="wrapper">
+            <a class="site-title" href="~/">@Site.SiteTitle</a>
+            <p class="site-desc">@Site.SiteDescription</p>
+            <navigation role="main-navigation">
+                @UI.Menu(StopLevel: 1)
+            </navigation>
+        </div>
+    </header>
+    <div class="wrapper">
+        @RenderBody()
+    </div>
 
     @Scripts.Render("~/bundles/jquery", "~/bundles/extLibs", "~/bundles/localApp")
     @RenderSection("scripts", required: false)    
 </body>
+@RenderSection("script", required: false)
 </html>

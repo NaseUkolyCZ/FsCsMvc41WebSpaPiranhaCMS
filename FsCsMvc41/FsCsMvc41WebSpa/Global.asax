@@ -3,6 +3,8 @@
 
   protected void Application_Start(Object sender, EventArgs e) {
       base.Start();
+
+      FsCsMvc41WebSpa.RouteConfig.RegisterRoutes(RouteTable.Routes);
   }
 
 </script>
