@@ -8,6 +8,8 @@
     @UI.Head()
 
     <link type="text/css" rel="stylesheet" href="~/content/css/style.css" />
+    <link rel="stylesheet" href="~/css/metro-bootstrap.css">
+    <link rel="stylesheet" href="~/css/metro-bootstrap-responsive.css">
 
     @RenderSection("head", required: false)
 
@@ -15,23 +17,46 @@
     <meta name="viewport" content="width=device-width" />
     @Styles.Render("~/Content/themes/base/css", "~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+
+    <script src="~/js/metro/metro.min.js"></script>
 </head>
-<body>
-    <header role="banner">
-        <div class="wrapper">
-            <a class="site-title" href="~/">@Site.SiteTitle</a>
-            <p class="site-desc">@Site.SiteDescription</p>
-            <navigation role="main-navigation">
-                @UI.Menu(StopLevel: 1)
-            </navigation>
+<body class="metro">
+    <header class="bg-dark">
+        <div class="navigation-bar dark">
+            <div class="navigation-bar-content container">
+                <nav class="navigation-bar dark">
+                    <nav class="navigation-bar-content">
+                        @UI.Menu(StopLevel: 1)
+                    </nav>
+                </nav>
+            </div>
         </div>
+
     </header>
-    <div class="wrapper">
-        @RenderBody()
+
+    <div class="">
+        <div>
+            <div class="container" style="padding: 50px 20px">
+                <h1 class="fg-white"><a href="~/">@Site.SiteTitle</a></h1>
+                <h2 class="fg-white">
+                    @Site.SiteDescription
+                </h2>
+            </div>
+        </div>
+
+        <div class="container">
+            @RenderBody()
+        </div>
+
+        <div class="bg-dark">
+            <div class="container tertiary-text bg-dark fg-white" style="padding: 10px">
+                &copy; 2012-2013 Noone Corp.
+            </div>
+        </div>
     </div>
 
     @Scripts.Render("~/bundles/jquery", "~/bundles/extLibs", "~/bundles/localApp")
-    @RenderSection("scripts", required: false)    
+    @RenderSection("scripts", required: false)
 </body>
 @RenderSection("script", required: false)
 </html>
